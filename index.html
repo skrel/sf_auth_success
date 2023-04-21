@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <title>Your Page Title</title>
     <style>
@@ -8,15 +9,8 @@
       div {text-align: center;}
     </style>
   </head>
-  <body>
-    <h1>Success!</h1>
-    
-    <div>
-      <label for="code">Access Code</label><br>
-      <input type="text" id="code" name="code" value="**********"><br>
-      <input type="button" value="Copy" onclick="Copy();">
-    </div>
-    
+  
+  <script type="text/javascript">
     function Copy() {
       var Url = document.getElementById("url");
       Url.innerHTML = window.location.href;
@@ -24,6 +18,14 @@
       Url.select();
       document.execCommand("copy");
     }
-      
+  </script>
+  
+  <body>
+    <h1>Success!</h1>
+    <div>
+      <label for="code">Access Code</label><br>
+      <input type="text" id="code" name="code" value="**********"><br>
+      <input type="button" value="Copy" onclick="Copy();">
+    </div>
   </body>
 </html>
