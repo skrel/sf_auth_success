@@ -11,9 +11,19 @@
   <body>
     <h1>Success!</h1>
     
-    <label for="code">Access Code</label><br>
-    <input type="text" id="code" name="code" value="**********"><br>
-    <input type="submit" value="Copy">
+    <div>
+      <label for="code">Access Code</label><br>
+      <input type="text" id="code" name="code" value="**********"><br>
+      <input type="button" value="Copy" onclick="Copy();">
+    </div>
     
+    function Copy() {
+      var Url = document.getElementById("url");
+      Url.innerHTML = window.location.href;
+      console.log(Url.innerHTML)
+      Url.select();
+      document.execCommand("copy");
+    }
+      
   </body>
 </html>
