@@ -47,15 +47,16 @@ body {
   
   <script>
     var $temp = $("<input>");
-var $url = $(location).attr('href');
+    var $url = $(location).attr('href');
 
-$('.clipboard').on('click', function() {
-  $("body").append($temp);
-  $temp.val($url).select();
-  document.execCommand("copy");
-  $temp.remove();
-  $("p").text("URL copied!");
-})
+    $('.clipboard').on('click', function() {
+      console.log('button pressed');
+      $("body").append($temp);
+      $temp.val($url).select();
+      document.execCommand("copy");
+      $temp.remove();
+      $("p").text("URL copied!");
+    })
   </script>
   
   <body>
