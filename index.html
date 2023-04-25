@@ -3,20 +3,30 @@
   
   <head>
     <title>Your Page Title</title>
+    <style>
+      h1 {text-align: center;}
+      div {text-align: center;}
+    </style>
   </head>
   
   <body>
-    <center>
-      <h1>Success!</h1>
-      <div>
-        <input type="button" value="Copy" onclick="Copy();">
-      </div>
-    </center>
+    <h1>Success!</h1>
+    <div>
+      <input type="button" value="Copy" onclick="Copy();">
+      <br />
+      <textarea id="paste-box" rows="1" cols="30" hidden></textarea>
+    </div>
 
     <script>
       function Copy() {
-        let url = document.location.href;
-        console.log(url);        
+        var Url = document.getElementById("paste-box");
+        Url.value = window.location.href;
+        console.log('xRef Value = ' + Url.value);
+        // Select the text field
+        Url.select();
+        Url.setSelectionRange(0, 99999); // For mobile devices
+        // Copy the text inside the text field
+        document.execCommand("Copy");
       }
     </script>
 
