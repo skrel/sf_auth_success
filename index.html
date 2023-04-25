@@ -36,7 +36,19 @@
     
   </head>
   
-  <script>
+  
+  
+  <body>
+    <div class="background">
+      <center>
+        <h1>Success!</h1>
+        <button class="clipboard">Click me to copy current Url</button>
+        <p>Have you already clicked?</p>
+      </center>
+    </div>
+    
+    
+    <script>
     var $temp = $("<input>");
     var $url = $(location).attr('href');
 
@@ -49,15 +61,6 @@
       $("p").text("URL copied!");
     })
   </script>
-  
-  <body>
-    <div class="background">
-      <center>
-        <h1>Success!</h1>
-        <button class="clipboard">Click me to copy current Url</button>
-        <p>Have you already clicked?</p>
-      </center>
-    </div>
   </body>
   
 </html>
